@@ -67,4 +67,5 @@ class User extends Authenticatable implements FilamentUser
         return $this->hasMany(Gallery::class);
     }
 
+
 }
