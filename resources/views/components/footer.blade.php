@@ -8,6 +8,9 @@
                 <hr class="border border-t border-black" />
             </div>
             <p class="font-bold text-center"> @lang('messages.front')</p>
+            <p><a
+                    class="underline text-sm text-gray-600 "href="{{ route('page.single', ['locale' => app()->currentLocale(), 'page' => 'terms']) }}">@lang('messages.terms')</a>
+            </p>
             <p class="text-sm">Copyright © 2024 - {{ \Carbon\Carbon::now()->year }} </p>
 
         </div>
@@ -26,4 +29,5 @@
 
         </div>
     </div>
+
 </footer>

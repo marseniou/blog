@@ -89,15 +89,15 @@ class PicturesRelationManager extends RelationManager
                         $smallPath = $this->expandUrl($record->url);
 
                         //dd($smallPath);
-
+            
                         File::delete(public_path('/storage/' . $record->url));
                         File::delete(public_path('/storage/' . $smallPath));
                     })
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                /*  Tables\Actions\BulkActionGroup::make([
+                     Tables\Actions\DeleteBulkAction::make(),
+                 ]), */
             ]);
     }
     public function expandUrl($url): string

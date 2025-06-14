@@ -12,5 +12,6 @@ return [
     'summary' => 'Project Summary',
     'categories' => 'Categories',
     'more' => 'more',
-    'share' => 'Share on Facebook'
+    'share' => 'Share on Facebook',
+    'terms' => 'Terms and Conditions'
 ];
