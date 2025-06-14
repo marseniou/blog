@@ -1,4 +1,4 @@
-        <div class="flex justify-center align-items-center pt-16">
+        <div class="flex justify-center align-items-center mt-12">
 
             <a title="{{ __('messages.share') }}"
                 href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}" target="_blank">

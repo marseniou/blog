@@ -1,6 +1,6 @@
-<footer class="shadow-lg sticky top-[100vh]">
+<footer class="shadow-lg sticky">
     <div class="divider divider-primary opacity-20"></div>
-    <div class="bg-base-100 h-auto pt-6">
+    <div class="bg-base-100 h-auto">
 
         <div class="flex flex-col items-center gap-2 justify-center">
             <div class="logo text-4xl text-normal">

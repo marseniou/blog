@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use Filament\Navigation\NavigationItem;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\Widgets;
@@ -23,6 +24,7 @@ use Outerweb\FilamentTranslatableFields\Filament\Plugins\FilamentTranslatableFie
 
 class AdminPanelProvider extends PanelProvider
 {
+    protected static ?int $navigationSort = 1;
     public function panel(Panel $panel): Panel
     {
         return $panel
@@ -71,6 +73,11 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+            ])
+            ->navigationItems([
+                NavigationItem::make('Front Page')
+                    ->url('/')
+                    ->icon('heroicon-o-globe-alt')
             ])
             ->topNavigation();
 

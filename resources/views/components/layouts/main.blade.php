@@ -1521,15 +1521,16 @@
     @endif
 </head>
 
-<body>
+<body class="flex flex-col min-h-screen">
     <x-helpers.navi></x-helpers.navi>
-
-    <div class="min-h-svh mt-12">
-        {{ $slot }}
-    </div>
-    @if (Route::currentRouteName() === 'home')
-        <img src="{{ url('/storage/person.webp') }}" alt="archart" class="fixed bottom-0 opacity-30 z-999">
-    @endif
-    <x-helpers.share-on-facebook />
+    <main class="flex-grow">
+        <div class="mt-12">
+            {{ $slot }}
+        </div>
+        @if (Route::currentRouteName() === 'home')
+            <img src="{{ url('/storage/person.webp') }}" alt="archart" class="fixed bottom-0 opacity-30 z-999">
+        @endif
+        <x-helpers.share-on-facebook />
+    </main>
     <x-footer />
 </body>
