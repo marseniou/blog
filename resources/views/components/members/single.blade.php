@@ -1,5 +1,7 @@
 <x-layouts.main>
-
+    <div class="container mx-auto">
+        {{ Breadcrumbs::render('member.single', $member) }}
+    </div>
     <section class="py-10 md:py-16">
         <div class="container max-w-screen-md lg:max-w-screen-lg mx-auto space-y-4 px-8">
             <div class="text-center">

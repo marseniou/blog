@@ -1,4 +1,7 @@
 <x-layouts.main>
+    <div class="container mx-auto">
+        {{ Breadcrumbs::render('members') }}
+    </div>
     <div class="px-6 py-12 sm:py-28">
         <div class="mx-auto max-w-6xl">
             <h1 class="text-primary-text text-5xl py-8">@lang('messages.members')</h1>

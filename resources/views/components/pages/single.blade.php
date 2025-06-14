@@ -1,4 +1,7 @@
 <x-layouts.main>
+    <div class="container mx-auto mb-8">
+        {{ Breadcrumbs::render('page.single', $page) }}
+    </div>
     <div class="container max-w-screen-md lg:max-w-screen-lg mx-auto space-y-4 px-8">
         @if ($page->showFeatured())
             <figure class="image mb-4">
@@ -11,6 +14,7 @@
             </a>
         @endauth
         <article class="prose md:prose-md lg:prose-lg">
+            <h1>{{ $page->title }}</h1>
             {!! tiptap_converter()->asHTML($page->content) !!}
             {{-- {!! str($page->content)->sanitizeHtml() !!} --}}
 

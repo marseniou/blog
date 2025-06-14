@@ -1523,6 +1523,7 @@
 
 <body class="flex flex-col min-h-screen">
     <x-helpers.navi></x-helpers.navi>
+
     <main class="flex-grow">
         <div class="mt-12">
             {{ $slot }}
