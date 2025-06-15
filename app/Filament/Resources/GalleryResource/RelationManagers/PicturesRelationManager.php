@@ -2,21 +2,21 @@
 
 namespace App\Filament\Resources\GalleryResource\RelationManagers;
 
-use App\Events\ImageProcess;
 use Filament\Forms;
 use Filament\Tables;
 use App\Models\Picture;
 use Filament\Forms\Form;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\TextInputColumn;
 use Filament\Tables\Table;
+use App\Events\ImageProcess;
 use Illuminate\Support\Facades\File;
 use App\Tables\Columns\PictureColumn;
+use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Filament\Tables\Actions\CreateAction;
 use Filament\Tables\Columns\Layout\Stack;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Tables\Columns\TextInputColumn;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Resources\RelationManagers\RelationManager;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
@@ -89,7 +89,7 @@ class PicturesRelationManager extends RelationManager
                         $smallPath = $this->expandUrl($record->url);
 
                         //dd($smallPath);
-            
+
                         File::delete(public_path('/storage/' . $record->url));
                         File::delete(public_path('/storage/' . $smallPath));
                     })
