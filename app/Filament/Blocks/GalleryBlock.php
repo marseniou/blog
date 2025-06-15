@@ -1,11 +1,10 @@
 <?php
 namespace App\Filament\Blocks;
 
-use App\Models\Gallery;
+
 use Filament\Forms\Components\Select;
 use FilamentTiptapEditor\TiptapBlock;
-use App\Models\Gallery as GalleryModel;
-use Filament\Forms\Components\TextInput;
+
 
 
 class GalleryBlock extends TiptapBlock
