@@ -4,6 +4,7 @@ namespace App\Providers;
 use App\Models\Page;
 use App\Observers\PageObserver;
 
+use App\Filament\Blocks\PdfBlock;
 use Illuminate\Support\Facades\URL;
 use App\Filament\Blocks\GalleryBlock;
 use Illuminate\Support\Facades\Route;
@@ -23,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
             $component
                 ->blocks([
                     GalleryBlock::class,
+                    PdfBlock::class,
 
                 ]);
         });

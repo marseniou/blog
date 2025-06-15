@@ -1,9 +1,10 @@
 <x-layouts.main>
-    <div class="container mx-auto">
+
+
+
+    <div class="container mx-auto max-w-screen-lg px-8 py-4">
         {{ Breadcrumbs::render('page.category', $category) }}
-    </div>
-    <div class="container mx-auto max-w-screen-lg px-6 py-8">
-        <h1 class="text-4xl mb-8">{{ $category->name }}</h1>
+        <h1 class="text-3xl mb-4">{{ $category->name }}</h1>
         <div class="space-y-8 lg:grid lg:grid-cols-2 xl:grid-cols-3">
 
 

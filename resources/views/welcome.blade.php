@@ -1,7 +1,4 @@
 <x-layouts.main>
-    <div class="container mx-auto">
-        {{ Breadcrumbs::render('home') }}
-    </div>
     <div class="hero bg-base-200 min-h-screen">
         <div class="hero-content text-center">
             <div class="max-w-md">
