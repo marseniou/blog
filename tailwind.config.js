@@ -27,8 +27,6 @@ export default {
         {mytheme:{
             "primary": "#c4afc5",
             "base-300": "#f8f9fa",
-
-
         },
     },
       'light'
