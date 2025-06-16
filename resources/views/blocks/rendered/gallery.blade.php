@@ -1,7 +1,7 @@
 @php
     $gallery = App\Models\Gallery::find($gallery);
     if ($gallery !== null) {
-        $images = $gallery->pictures;
+        $images = $gallery->pictures()->orderBy('weight', 'desc')->get();
     } else {
         return;
     }
