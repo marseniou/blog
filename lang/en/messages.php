@@ -13,5 +13,6 @@ return [
     'categories' => 'Categories',
     'more' => 'more',
     'share' => 'Share on Facebook',
-    'terms' => 'Terms and Conditions'
+    'terms' => 'Terms and Conditions',
+    'no_pages_in_category' => 'No pages in this category',
 ];

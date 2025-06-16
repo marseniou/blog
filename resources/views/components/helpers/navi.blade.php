@@ -33,7 +33,7 @@
 
     </div>
     <div class="navbar-center">
-        <a class="btn btn-ghost text-xl" href="{{ route('home') }}">ArchArt</a>
+        <a class="btn btn-ghost text-xl" href="{{ route('home', ['locale' => app()->getLocale()]) }}">ArchArt</a>
 
     </div>
     <div class="navbar-end hidden lg:flex">

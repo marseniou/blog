@@ -1,4 +1,4 @@
-<footer class="shadow-lg sticky">
+<footer class="shadow-lg sticky z-20">
     <div class="divider divider-primary opacity-20"></div>
     <div class="bg-base-100 h-auto">
 

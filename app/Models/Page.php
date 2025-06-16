@@ -56,5 +56,9 @@ class Page extends Model
     {
         return $this->show_featured ? true : false;
     }
+    public function active()
+    {
+        return $this->active ? true : false;
+    }
 
 }

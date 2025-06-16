@@ -9,7 +9,13 @@
 
 
             @foreach ($pages as $page)
-                <x-pages.card :page="$page"></x-pages.card>
+                @if ($page->active() && $page->count() > 0)
+                    <x-pages.card :page="$page"></x-pages.card>
+                @else
+                    <div class="alert alert-warning">
+                        <span>@lang('messages.no_pages_in_category')</span>
+                    </div>
+                @endif
             @endforeach
         </div>
         {!! $pages->onEachSide(4)->links() !!}
