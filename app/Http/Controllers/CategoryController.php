@@ -16,7 +16,11 @@ class CategoryController extends Controller
         OpenGraph::setTitle('ArchArt ' . $category->name);
         //OpenGraph::addImage(url("/storage/" . $member->image));
 
-        $pages = $category->pages()->paginate(10);
+        $pages = $category->pages()
+            ->where('active', true)
+            ->orderBy('created_at', 'desc')
+            ->paginate(12);
+
         return view('components.pages.category', compact('pages', 'category'));
     }
 }
