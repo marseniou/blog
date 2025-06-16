@@ -6,8 +6,7 @@
                 <h3 class="py-6 text-2xl">
                     @lang('messages.front')
                 </h3>
-                <a href="{{ route('page.single', ['page' => 'i-zoi-ton-prosopikon-arxeion']) }}"
-                    class="btn btn-primary">@lang('messages.summary')</a>
+                <a href="{{ route('page.single', ['page' => 'summary']) }}" class="btn btn-primary">@lang('messages.summary')</a>
                 <a href="https://engonopoulos.gr" target="_blank" class="btn btn-primary">@lang('messages.episimo')</a>
                 </a>
             </div>
