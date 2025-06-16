@@ -2,7 +2,7 @@
 
 
 
-    <div class="container mx-auto max-w-screen-lg px-8 py-4">
+    <div class="container mx-auto px-8 py-4">
         {{ Breadcrumbs::render('page.category', $category) }}
         <h1 class="text-3xl mb-4">{{ $category->name }}</h1>
         <div class="space-y-8 lg:grid lg:grid-cols-2 xl:grid-cols-3">
