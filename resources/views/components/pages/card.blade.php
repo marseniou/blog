@@ -1,9 +1,11 @@
 <div class="card bg-base-100 w-96 shadow-xl">
-    <figure>
-        <img class="rounded-t-lg" shadow-md" src="{{ '/storage/' . $page->featured_image }}" alt="">
-    </figure>
+
+    <img class="rounded-t-lg shadow-md h-48 max-h-48 object-cover" src="{{ url('/storage/' . $page->featured_image) }}"
+        alt="">
+
     <div class="card-body">
-        <h2 class="card-title">{{ $page->title }}</h2>
+        <h2 class="card-title"><a class="underline"
+                href="{{ route('page.single', ['page' => $page->slug]) }}">{{ $page->title }}</a></h2>
         <p class="leading-relaxed">
             {!! str($page->excerpt)->sanitizeHtml()->limit(250) !!}
 

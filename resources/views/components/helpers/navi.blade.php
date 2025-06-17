@@ -29,8 +29,11 @@
             </ul>
         </div>
         <x-helpers.switcher />
-
-
+        @auth
+            <ul>
+                <li class="text-sm text-gray-400">{{ auth()->user()->name }}</li>
+            </ul>
+        @endauth
     </div>
     <div class="navbar-center">
         <a class="btn btn-ghost text-xl" href="{{ route('home', ['locale' => app()->getLocale()]) }}">ArchArt</a>
@@ -58,7 +61,7 @@
             </li>
         </ul>
         @auth
-            @if (auth()->user()->id === 1)
+            @if (auth()->user()->isAdmin() || auth()->user()->isEditor())
                 <ul class="menu menu-horizontal px-1">
                     <li>
                         <a href="/admin" class="btn btn-sm">Admin</a>

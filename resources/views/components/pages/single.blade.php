@@ -3,8 +3,9 @@
     <div class="container max-w-screen-md lg:max-w-screen-lg mx-auto px-8 py-4">
         {{ Breadcrumbs::render('page.single', $page) }}
         @if ($page->showFeatured())
-            <figure class="image my-8">
-                <img class="rounded-lg shadow-md" src="/storage/{{ $page->featured_image }}" alt="">
+            <figure class="mb-8">
+                <img class="rounded-lg shadow-md w-full h-96 max-h-96 object-cover"
+                    src="/storage/{{ $page->featured_image }}" alt="">
             </figure>
         @endif
         @auth
