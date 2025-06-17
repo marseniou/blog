@@ -46,7 +46,7 @@ class PagePolicy
      */
     public function delete(User $user, Page $page): bool
     {
-        return $user->isAdmin();
+        return $user->isAdmin() || $page->user_id === auth()->id();
     }
 
     /**
