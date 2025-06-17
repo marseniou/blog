@@ -10,4 +10,10 @@ class CreatePage extends CreateRecord
 {
 
     protected static string $resource = PageResource::class;
+    public function mutateFormDataBeforeCreate($data): array
+    {
+        $data['user_id'] = auth()->user()->id;
+        return $data;
+    }
+
 }
