@@ -81,6 +81,7 @@ class PageResource extends Resource
                     Group::make()->schema([
                         Section::make('Actions')->schema([
                             Forms\Components\Select::make('category_id')
+                                ->required()
                                 ->relationship('category', 'name')
                                 ->getOptionLabelFromRecordUsing(fn(Category $record) => $record->name)
                                 ->label('Category'),
