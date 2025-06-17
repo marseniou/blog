@@ -3,6 +3,8 @@
 return [
     'welcome' => 'Welcome',
     'members' => 'Members',
+    'about' => 'About',
+    'contact' => 'Contact',
     'team_members' => 'ArchArt Team',
     'front' => '\'Nikos Engonopoulos\' Archive: digitization, documentation and publication.',
     'no_records' => 'No records found',

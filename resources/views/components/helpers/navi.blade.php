@@ -8,6 +8,9 @@
                 </svg>
             </div>
             <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                <li class="font-bold">
+                    <a href="{{ route('page.single', ['page' => 'about']) }}">@lang('messages.about')</a>
+                </li>
                 <li>
                     <a href="{{ route('members') }}" class="font-bold">@lang('messages.members')</a>
                 </li>
@@ -26,6 +29,9 @@
                         </ul>
                     </details>
                 </li>
+                <li class="font-bold">
+                    <a href="{{ route('page.single', ['page' => 'contact']) }}">@lang('messages.contact')</a>
+                </li>
             </ul>
         </div>
         <x-helpers.switcher />
@@ -41,6 +47,9 @@
     </div>
     <div class="navbar-end hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
+            <li class="font-bold">
+                <a href="{{ route('page.single', ['page' => 'about']) }}">@lang('messages.about')</a>
+            </li>
             <li>
                 <a href="{{ route('members') }}" class="font-bold">@lang('messages.members')</a>
             </li>
@@ -59,6 +68,10 @@
                     </ul>
                 </details>
             </li>
+            <li class="font-bold">
+                <a href="{{ route('page.single', ['page' => 'contact']) }}">@lang('messages.contact')</a>
+            </li>
+            <li>
         </ul>
         @auth
             @if (auth()->user()->isAdmin() || auth()->user()->isEditor())
