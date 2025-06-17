@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Spatie\Translatable\HasTranslations;
 
@@ -13,6 +14,7 @@ class Category extends Model
         'name',
         'slug',
         'show_on_menu',
+        'user_id'
     ];
     protected $casts = [
         'name' => 'array',
@@ -30,6 +32,10 @@ class Category extends Model
     public function pages(): HasMany
     {
         return $this->hasMany(Page::class);
+    }
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
     }
 
     public function show_on_menu()

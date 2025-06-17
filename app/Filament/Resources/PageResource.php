@@ -85,7 +85,7 @@ class PageResource extends Resource
                                 ->getOptionLabelFromRecordUsing(fn(Category $record) => $record->name)
                                 ->label('Category'),
                             Forms\Components\Toggle::make('active')->required(),
-                            Forms\Components\Select::make('user_id')->relationship('user', 'name')->required(),
+                            //Forms\Components\Select::make('user_id')->relationship('user', 'name')->required(),
                         ])
 
                     ])
@@ -121,12 +121,16 @@ class PageResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-            ])
+            ])->defaultSort('updated_at', 'desc')
             ->filters([
                 SelectFilter::make('category_id')
                     ->relationship('category', 'name')
                     ->getOptionLabelFromRecordUsing(fn(Category $record) => $record->name)
                     ->label('Category'),
+                SelectFilter::make('user_id')
+                    ->relationship('user', 'name')
+                    ->getOptionLabelFromRecordUsing(fn($record) => $record->name)
+                    ->label('User'),
             ])
             ->actions([
                 Action::make('view')
