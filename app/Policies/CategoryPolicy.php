@@ -38,7 +38,7 @@ class CategoryPolicy
      */
     public function update(User $user, Category $category): bool
     {
-        return $user->isAdmin() || $user->categories->contains($category);
+        return $user->isAdmin() || $user->isEditor();
     }
 
     /**
@@ -46,7 +46,7 @@ class CategoryPolicy
      */
     public function delete(User $user, Category $category): bool
     {
-        return $user->isAdmin() || $user->categories->contains($category);
+        return $user->isAdmin() || $user->isEditor();
     }
 
     /**
@@ -54,7 +54,7 @@ class CategoryPolicy
      */
     public function restore(User $user, Category $category): bool
     {
-        return $user->isAdmin() || $user->categories->contains($category);
+        return $user->isAdmin() || $user->isEditor();
     }
 
     /**
@@ -62,6 +62,6 @@ class CategoryPolicy
      */
     public function forceDelete(User $user, Category $category): bool
     {
-        return $user->isAdmin() || $user->categories->contains($category);
+        return $user->isAdmin() || $user->isEditor();
     }
 }
