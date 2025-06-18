@@ -1,8 +1,8 @@
 <div class="card bg-base-100 w-96 shadow-xl mb-8">
-
+@if($page->featured_image !== null)
     <img class="rounded-t-lg shadow-md h-48 max-h-48 object-cover overflow-hidden"
         src="{{ url('/storage/' . $page->featured_image) }}" alt="">
-
+@endif
     <div class="card-body">
         <h2 class="card-title"><a class="underline"
                 href="{{ route('page.single', ['page' => $page->slug]) }}">{{ $page->title }}</a></h2>
