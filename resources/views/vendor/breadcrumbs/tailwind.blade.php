@@ -1,5 +1,5 @@
 @unless ($breadcrumbs->isEmpty())
-    <div class="breadcrumbs text-sm text-gray-500">
+    <div class="breadcrumbs text-sm text-gray-500 mb-4">
         <ul>
             @foreach ($breadcrumbs as $breadcrumb)
                 @if ($breadcrumb->url && !$loop->last)
