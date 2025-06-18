@@ -63,6 +63,9 @@ class CategoryResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])->reorderable('weight')
+            ->defaultSort(function (Builder $query) {
+                return $query->orderBy('weight', 'asc');
+            })
             ->filters([
                 //
             ])
@@ -76,6 +79,7 @@ class CategoryResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
+
     }
 
     public static function getRelations(): array
