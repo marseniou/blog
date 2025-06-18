@@ -58,7 +58,7 @@
                     <summary>@lang('messages.categories')</summary>
                     <ul class="bg-base-100 rounded-t-none p-2">
 
-                        @foreach (App\Models\Category::all() as $category)
+                        @foreach (App\Models\Category::orderBy('weight', 'asc')->get() as $category)
                             @if ($category->show_on_menu)
                                 <li><a
                                         href="{{ route('page.category', ['category' => $category->slug]) }}">{{ $category->name }}</a>
