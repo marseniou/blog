@@ -2,6 +2,7 @@
 namespace App\Filament\Blocks;
 
 
+
 use Filament\Forms\Components\Select;
 use FilamentTiptapEditor\TiptapBlock;
 
@@ -26,7 +27,7 @@ class GalleryBlock extends TiptapBlock
             Select::make('gallery')
                 ->label('Choose Gallery')
                 ->options(
-                    auth()->user()->galleries->pluck('name', 'id')
+                    \App\Models\Gallery::all()->pluck('name', 'id')
                 )
 
         ];

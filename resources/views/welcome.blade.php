@@ -6,7 +6,9 @@
                 <h3 class="py-6 text-2xl">
                     @lang('messages.front')
                 </h3>
-                <x-helpers.front-page />
+                @if (App\Models\Page::where('slug', 'front-page')->exists())
+                    <x-helpers.front-page />
+                @endif
                 <a href="{{ route('page.single', ['page' => 'summary']) }}" class="btn btn-primary">@lang('messages.summary')</a>
                 <a href="https://engonopoulos.gr" target="_blank" class="btn btn-primary">@lang('messages.episimo')</a>
                 </a>

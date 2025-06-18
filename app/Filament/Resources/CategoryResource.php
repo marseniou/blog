@@ -62,12 +62,14 @@ class CategoryResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-            ])
+            ])->reorderable('weight')
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make()
+                    ->hidden(fn($record) => $record->slug === 'uncategorized'),
+
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

@@ -14,12 +14,15 @@ class Category extends Model
         'name',
         'slug',
         'show_on_menu',
-        'user_id'
+        'user_id',
+        'weight'
+
     ];
     protected $casts = [
         'name' => 'array',
         'slug' => 'string',
-        'show_on_menu' => 'boolean'
+        'show_on_menu' => 'boolean',
+
     ];
     public array $translatable = [
         'name',

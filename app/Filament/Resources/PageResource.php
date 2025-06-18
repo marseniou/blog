@@ -5,19 +5,21 @@ namespace App\Filament\Resources;
 use Filament\Forms;
 use App\Models\Page;
 use Filament\Tables;
+use Filament\Forms\Set;
 use App\Models\Category;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Illuminate\Support\Str;
 use Filament\Resources\Resource;
+
 use Filament\Tables\Actions\Action;
 use Filament\Forms\Components\Group;
-
 use Filament\Forms\Components\Toggle;
+
 use Filament\Forms\Components\Section;
+
 use FilamentTiptapEditor\TiptapEditor;
-
 use Filament\Forms\Components\FileUpload;
-
 use Filament\Tables\Filters\SelectFilter;
 use FilamentTiptapEditor\Enums\TiptapOutput;
 use Filament\Resources\Concerns\Translatable;
@@ -44,12 +46,28 @@ class PageResource extends Resource
                         Forms\Components\TextInput::make('title')
                             ->label('Title')
                             ->required()
+                            ->maxLength(255)
+                            ->helperText('The title of the page, displayed in the browser tab and as the main heading on the page.')
+                            ->debounce(250)
+                            ->live(onBlur: true)
+                            ->afterStateUpdated(function (Set $set, ?string $state) {
+
+                                $set('slug', Str::slug($state));
+                            })
                             ->translatable(),
+
+
+
+
 
 
                         Forms\Components\TextInput::make('slug')
                             ->required()
-                            ->maxLength(255),
+                            ->maxLength(255)
+                            ->disabled(function ($state) {
+                                return $state === 'front-page' || $state === 'about' || $state === 'contact';
+                            })
+                            ->helperText('This will autogenerate. If you have to change it, use only lowercase letters, numbers, and dashes. Do not use spaces or special characters.'),
                         Forms\Components\RichEditor::make('excerpt')
                             ->translatable()
                             ->columnSpan(2),
