@@ -56,7 +56,7 @@
             <li class="font-bold">
                 <details>
                     <summary>@lang('messages.categories')</summary>
-                    <ul class="bg-base-100 rounded-t-none p-2">
+                    <ul class="bg-base-100 rounded-t-none p-2 w-auto lg:w-48">
 
                         @foreach (App\Models\Category::orderBy('weight', 'asc')->get() as $category)
                             @if ($category->show_on_menu)
