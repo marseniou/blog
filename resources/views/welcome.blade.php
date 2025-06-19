@@ -1,7 +1,7 @@
 <x-layouts.main>
     <div class="hero bg-base-200 min-h-screen">
         <div class="hero-content text-center">
-            <div class="max-w-md">
+            <div class="max-w-lg">
 
                 <h1 class="text-4xl">
                     @lang('messages.front')
