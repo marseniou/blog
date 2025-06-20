@@ -93,7 +93,7 @@ class PageResource extends Resource
 
                         Toggle::make('show_featured')
                             ->label('Show Featured Image On Single Page')
-
+                            ->default(false)
 
                     ]),
                     Group::make()->schema([
