@@ -27,7 +27,7 @@
         @endif
     @endforeach
     <dialog id="my_modal_1" class="modal">
-        <div class="modal-box">
+        <div class="modal-box w-11/12 max-w-5xl">
 
             <p class="" x-html="url"></p>
 
