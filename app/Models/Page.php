@@ -33,6 +33,9 @@ class Page extends Model
         'title' => 'array',
         'excerpt' => 'array',
         'content' => 'array',
+        'ontop' => 'boolean',
+        'active' => 'boolean',
+        'show_featured' => 'boolean',
     ];
     protected $translatable = [
         'title',

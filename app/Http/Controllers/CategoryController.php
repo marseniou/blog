@@ -19,8 +19,9 @@ class CategoryController extends Controller
         $pages = $category->pages()
             ->where('active', true)
 
-            ->orderBy('created_at', 'desc')
-            ->orderBy('ontop')
+            //->latest()
+            ->orderBy('ontop', 'desc')
+
             ->paginate(12);
 
 
