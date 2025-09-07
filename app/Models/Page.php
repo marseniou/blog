@@ -23,6 +23,7 @@ class Page extends Model
         'excerpt',
         'content',
         'active',
+        'ontop',
         'user_id',
         'show_featured',
         'category_id'
@@ -60,5 +61,4 @@ class Page extends Model
     {
         return $this->active ? true : false;
     }
-
 }

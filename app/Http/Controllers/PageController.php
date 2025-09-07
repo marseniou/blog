@@ -11,6 +11,7 @@ class PageController extends Controller
 {
     public function single($locale, Page $page)
     {
+
         SEOMeta::setTitle($page->title);
         OpenGraph::setTitle($page->title);
 
