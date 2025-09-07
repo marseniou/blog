@@ -18,8 +18,11 @@ class CategoryController extends Controller
 
         $pages = $category->pages()
             ->where('active', true)
+
             ->orderBy('created_at', 'desc')
+            ->orderBy('ontop')
             ->paginate(12);
+
 
         return view('components.pages.category', compact('pages', 'category'));
     }

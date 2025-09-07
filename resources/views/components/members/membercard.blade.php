@@ -1,5 +1,6 @@
-<div class="bg-gradient-to-b from-slate-200 to-white flex-col justify-items-center py-8 lg:py-12 shadow-md rounded-lg">
-    <div class="avatar pb-6">
+<div
+    class="bg-gradient-to-b from-slate-200 to-white flex-col justify-items-center items-center py-8 lg:py-12 shadow-md rounded-lg">
+    <div class="avatar pb-6 flex justify-center">
         <div class="ring-primary ring-offset-base-100 w-24 lg:w-48 rounded-full ring ring-offset-2">
             <a href="{{ route('member.single', ['member' => $member]) }}">
                 <img src="/storage/{{ $member->image }}" alt="">

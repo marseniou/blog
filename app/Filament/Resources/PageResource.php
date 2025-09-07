@@ -104,6 +104,7 @@ class PageResource extends Resource
                                 ->getOptionLabelFromRecordUsing(fn(Category $record) => $record->name)
                                 ->label('Category'),
                             Forms\Components\Toggle::make('active')->required(),
+                            Forms\Components\Toggle::make('ontop')->label('Show article on Top'),
                             //Forms\Components\Select::make('user_id')->relationship('user', 'name')->required(),
                         ])
 
@@ -128,6 +129,8 @@ class PageResource extends Resource
 
 
                 Tables\Columns\IconColumn::make('active')
+                    ->boolean(),
+                Tables\Columns\IconColumn::make('ontop')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('user.name')
                     ->numeric()
@@ -189,5 +192,4 @@ class PageResource extends Resource
     {
         return ['en', 'el'];
     }
-
 }

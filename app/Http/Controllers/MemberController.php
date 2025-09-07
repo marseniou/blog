@@ -25,7 +25,7 @@ class MemberController extends Controller
             SEOMeta::setTitle("Μέλη του ArchArt Project");
             OpenGraph::setTitle("Μέλη του ArchArt Project");
         }
-        $members = Member::all();
+        $members = Member::active()->get();
         return view('components.members.grid', compact('members'));
     }
 }

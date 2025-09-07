@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @see https://github.com/artesaos/seotools
  */
@@ -10,7 +11,8 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults' => [
-            'title' => "ArchArt Project", // set false to total remove
+
+            'title' => "Αρχείο Νίκος Εγγονόπουλος | Nikos Engonopoulos Archive", // set false to total remove
             'titleBefore' => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
             'description' => '\'Nikos Engonopoulos\' Archive: digitization, documentation and publication.',
             'separator' => ' | ',
@@ -37,7 +39,7 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title' => 'ArchArt Project', // set false to total remove
+            'title' => 'Αρχείο Νίκος Εγγονόπουλος', // set false to total remove
             'description' => '\'Nikos Engonopoulos\' Archive: digitization, documentation and publication.',
             'url' => null, // Set null for using Url::current(), set false to total remove
             'type' => false,
@@ -59,7 +61,7 @@ return [
          * The default configurations to be used by the json-ld generator.
          */
         'defaults' => [
-            'title' => 'ArchArt Project', // set false to total remove
+            'title' => 'Αρχείο Νίκος Εγγονόπουλος: ψηφιοποίηση, τεκμηρίωση και δημοσιοποίηση.', // set false to total remove
             'description' => '\'Nikos Engonopoulos\' Archive: digitization, documentation and publication.',
             'url' => null, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
             'type' => 'WebPage',
