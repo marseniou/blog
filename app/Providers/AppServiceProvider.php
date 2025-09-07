@@ -1,16 +1,19 @@
 <?php
 
 namespace App\Providers;
+
 use App\Models\Page;
 use App\Observers\PageObserver;
 
 use App\Filament\Blocks\PdfBlock;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\URL;
 use App\Filament\Blocks\GalleryBlock;
 use Illuminate\Support\Facades\Route;
 use FilamentTiptapEditor\TiptapEditor;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Pagination\LengthAwarePaginator;
 use BezhanSalleh\FilamentLanguageSwitch\LanguageSwitch;
 
 class AppServiceProvider extends ServiceProvider
@@ -40,8 +43,5 @@ class AppServiceProvider extends ServiceProvider
         Model::automaticallyEagerLoadRelationships();
 
         Page::observe(PageObserver::class);
-
-
-
     }
 }

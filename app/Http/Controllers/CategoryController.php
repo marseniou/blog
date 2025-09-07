@@ -18,12 +18,9 @@ class CategoryController extends Controller
 
         $pages = $category->pages()
             ->where('active', true)
-
-            //->latest()
             ->orderBy('ontop', 'desc')
-
+            ->latest()
             ->paginate(12);
-
 
         return view('components.pages.category', compact('pages', 'category'));
     }
