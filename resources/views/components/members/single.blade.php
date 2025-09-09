@@ -33,13 +33,14 @@
         </div>
 
 
-        <div class="flex-1 flex justify-center px-12 py-12 bg-gradient-to-b from-base-100 to-base-200 leading-7">
-            <article class="prose !max-w-screen-md">
+        <div class="px-12 py-12 bg-gradient-to-b from-base-100 to-base-200 leading-7">
+            {{-- <article class="prose !max-w-screen-md"> --}}
+            <article class="prose md:prose-md lg:prose-lg">
                 {!! tiptap_converter()->asHTML($member->content) !!}
             </article>
 
+            {{-- </div> --}}
         </div>
-    </div>
 
-    {{--  </section> --}}
+        {{--  </section> --}}
 </x-layouts.main>
