@@ -18,7 +18,7 @@ Breadcrumbs::for('home', function (BreadcrumbTrail $trail) {
 });
 Breadcrumbs::for('members', function (BreadcrumbTrail $trail) {
     $trail->parent('home');
-    $trail->push(app()->getLocale() === 'en' ? 'Members' : 'Μέλη', route('members', ));
+    $trail->push(app()->getLocale() === 'en' ? 'Members' : 'Μέλη', route('members',));
 });
 
 Breadcrumbs::for('member.single', function (BreadcrumbTrail $trail, Member $member) {
@@ -27,6 +27,7 @@ Breadcrumbs::for('member.single', function (BreadcrumbTrail $trail, Member $memb
 });
 Breadcrumbs::for('page.single', function (BreadcrumbTrail $trail, Page $page) {
     $trail->parent('home');
+    $trail->push($page->category->name, route('page.category', $page->category));
     $trail->push($page->title, route('page.single', $page));
 });
 Breadcrumbs::for('page.category', function (BreadcrumbTrail $trail, Category $category) {
