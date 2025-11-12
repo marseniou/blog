@@ -4,7 +4,7 @@
 
             <div class="max-w-lg">
                 <div class="flex justify-center">
-                    <img class="rounded-lg overflow-hidden mb-8" src="/logos/archart.jpg" alt="Archart Project">
+                    <img class="rounded-lg overflow-hidden mb-8" src="/storage/logos/archart.jpg" alt="Archart Project">
                 </div>
                 <h1 class="text-4xl mb-4">
                     @lang('messages.front')
