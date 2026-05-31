@@ -22,12 +22,11 @@ class SetLocale
 
         // Check session if no locale in URL (for non-prefixed routes)
         if (!in_array($locale, ['en', 'el'])) {
-            $locale = session('locale', 'en');
+            $locale = session('locale', 'el');
         }
 
-        // If still not valid, default to English
         if (!in_array($locale, ['en', 'el'])) {
-            $locale = 'en';
+            $locale = 'el';
         }
 
         App::setLocale($locale);

@@ -12,11 +12,11 @@ return [
          */
         'defaults' => [
 
-            'title' => "Αρχείο Νίκου Εγγονόπουλου | Nikos Engonopoulos Archive",
+            'title' => "Αρχείο Νίκου Εγγονόπουλου",
             'titleBefore' => false,
-            'description' => "Nikos Engonopoulos (1907-1985) digital archive: over 10,000 digitized documents, manuscripts, photographs and letters by the Greek surrealist painter and poet. Research project by Panteion University, ASFA and UniWA. Funded by HFRI and NextGenerationEU.",
+            'description' => "Ψηφιοποιημένο αρχείο του Νίκου Εγγονόπουλου (1907-1985), Έλληνα υπερρεαλιστή ζωγράφου και ποιητή. Πάνω από 10.000 ψηφιοποιημένα τεκμήρια, χειρόγραφα, φωτογραφίες και επιστολές. Ερευνητικό έργο των Παντείου Πανεπιστημίου, ΑΣΚΤ και ΠΑΔΑ.",
             'separator' => ' | ',
-            'keywords' => ['Nikos Engonopoulos', 'ArchArt Project', 'Greek surrealism', 'Ελληνική τέχνη', 'ψηφιοποίηση', 'digital archive', 'surrealist painter', 'modern Greek poetry', 'cultural heritage', 'Αρχείο Εγγονόπουλου'],
+            'keywords' => ['Αρχείο Νίκου Εγγονόπουλου', 'ArchArt Project', 'Ελληνική τέχνη', 'υπερρεαλισμός', 'ψηφιοποίηση', 'πολιτιστική κληρονομιά', 'Nikos Engonopoulos', 'Greek surrealism', 'digital archive'],
             'canonical' => 'current', // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
             'robots' => 'all', // Set to 'all', 'none' or any combination of index/noindex and follow/nofollow
         ],
@@ -39,11 +39,11 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title' => 'Αρχείο Νίκου Εγγονόπουλου | Nikos Engonopoulos Archive',
-            'description' => "Digitized archive of Greek surrealist Nikos Engonopoulos (1907-1985): manuscripts, photographs, letters, and works spanning poetry and painting.",
+            'title' => 'Αρχείο Νίκου Εγγονόπουλου',
+            'description' => "Ψηφιοποιημένο αρχείο του Νίκου Εγγονόπουλου (1907-1985), Έλληνα υπερρεαλιστή ζωγράφου και ποιητή. Χειρόγραφα, φωτογραφίες, επιστολές και έργα ζωγραφικής και ποίησης.",
             'url' => null,
             'type' => 'website',
-            'site_name' => 'ArchArt Project — Nikos Engonopoulos Archive',
+            'site_name' => 'ArchArt Project — Αρχείο Νίκου Εγγονόπουλου',
             'image' => env('APP_URL') . '/storage/logos/archart.jpg',
         ],
     ],
@@ -61,8 +61,8 @@ return [
          * The default configurations to be used by the json-ld generator.
          */
         'defaults' => [
-            'title' => 'Αρχείο Νίκου Εγγονόπουλου | Nikos Engonopoulos Archive',
-            'description' => "Digitized archive of Greek surrealist Nikos Engonopoulos (1907-1985): manuscripts, photographs, letters, and works spanning poetry and painting.",
+            'title' => 'Αρχείο Νίκου Εγγονόπουλου',
+            'description' => "Ψηφιοποιημένο αρχείο του Νίκου Εγγονόπουλου (1907-1985), Έλληνα υπερρεαλιστή ζωγράφου και ποιητή. Χειρόγραφα, φωτογραφίες, επιστολές και έργα ζωγραφικής και ποίησης.",
             'url' => 'current', // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
             'type' => 'WebPage',
             'images' => [],
