@@ -19,14 +19,14 @@ Route::prefix('{locale}')->where(['locale' => 'en|el'])->group(function () {
 
         if (app()->getLocale() === 'en') {
             SEOMeta::setTitle('Nikos Engonopoulos Digital Archive');
-            SEOMeta::setDescription("Digitized archive of Nikos Engonopoulos (1907-1985), the Greek surrealist painter and poet. Over 10,000 documents, manuscripts, photographs and letters digitized by Panteion University, ASFA and UniWA. Funded by HFRI / NextGenerationEU.");
+            SEOMeta::setDescription("Digitized archive of Nikos Engonopoulos (1907-1985), the Greek surrealist painter and poet. Over 10,000 documents, manuscripts, photographs and letters digitized by Panteion University (led by Prof. Elisavet Arseniou), ASFA and UniWA. Funded by HFRI / NextGenerationEU.");
             OpenGraph::setTitle('Nikos Engonopoulos Digital Archive — ArchArt Project');
-            OpenGraph::setDescription("Digitized archive of Nikos Engonopoulos (1907-1985), the Greek surrealist painter and poet. Over 10,000 documents, manuscripts, photographs and letters digitized by Panteion University, ASFA and UniWA.");
+            OpenGraph::setDescription("Digitized archive of Nikos Engonopoulos (1907-1985), the Greek surrealist painter and poet. Over 10,000 documents, manuscripts, photographs and letters digitized by Panteion University (led by Prof. Elisavet Arseniou), ASFA and UniWA.");
         } else {
             SEOMeta::setTitle('Ψηφιακό Αρχείο Νίκου Εγγονόπουλου');
-            SEOMeta::setDescription("Ψηφιοποιημένο αρχείο του Νίκου Εγγονόπουλου (1907-1985), Έλληνα υπερρεαλιστή ζωγράφου και ποιητή. Πάνω από 10.000 τεκμήρια, χειρόγραφα, φωτογραφίες και επιστολές. Έργο των Παντείου, ΑΣΚΤ και ΠΑΔΑ.");
+            SEOMeta::setDescription("Ψηφιοποιημένο αρχείο του Νίκου Εγγονόπουλου (1907-1985), Έλληνα υπερρεαλιστή ζωγράφου και ποιητή. Πάνω από 10.000 τεκμήρια, χειρόγραφα, φωτογραφίες και επιστολές. Ερευνητικό έργο του Παντείου Πανεπιστημίου (με υπεύθυνη την καθηγήτρια Ελισάβετ Αρσενίου), ΑΣΚΤ και ΠΑΔΑ.");
             OpenGraph::setTitle('Ψηφιακό Αρχείο Νίκου Εγγονόπουλου — ArchArt Project');
-            OpenGraph::setDescription("Ψηφιοποιημένο αρχείο του Νίκου Εγγονόπουλου (1907-1985), Έλληνα υπερρεαλιστή ζωγράφου και ποιητή. Πάνω από 10.000 τεκμήρια, χειρόγραφα, φωτογραφίες και επιστολές.");
+            OpenGraph::setDescription("Ψηφιοποιημένο αρχείο του Νίκου Εγγονόπουλου (1907-1985), Έλληνα υπερρεαλιστή ζωγράφου και ποιητή. Πάνω από 10.000 τεκμήρια, χειρόγραφα, φωτογραφίες και επιστολές. Ερευνητικό έργο του Παντείου Πανεπιστημίου (με υπεύθυνη την καθηγήτρια Ελισάβετ Αρσενίου), ΑΣΚΤ και ΠΑΔΑ.");
         }
         OpenGraph::setType('website');
         OpenGraph::addImage(url('/storage/logos/archart.jpg'));
