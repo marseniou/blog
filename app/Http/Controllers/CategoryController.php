@@ -11,16 +11,27 @@ class CategoryController extends Controller
 {
     public function single($locale, Category $category)
     {
+        SEOMeta::setTitle($category->name);
+        SEOMeta::setCanonical(request()->url());
 
-        SEOMeta::setTitle('ArchArt ' . $category->name);
-        OpenGraph::setTitle('ArchArt ' . $category->name);
-        //OpenGraph::addImage(url("/storage/" . $member->image));
+        OpenGraph::setTitle($category->name . ' — Nikos Engonopoulos Archive');
+        OpenGraph::setUrl(request()->url());
+        OpenGraph::setType('website');
 
         $pages = $category->pages()
             ->where('active', true)
             ->orderBy('ontop', 'desc')
             ->latest()
             ->paginate(12);
+
+        if ($first = $pages->first()) {
+            if ($first->excerpt) {
+                OpenGraph::setDescription(strip_tags($first->excerpt));
+            }
+            if ($first->featured_image) {
+                OpenGraph::addImage(url("/storage/" . $first->featured_image));
+            }
+        }
 
         return view('components.pages.category', compact('pages', 'category'));
     }

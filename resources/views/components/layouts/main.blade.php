@@ -8,6 +8,8 @@
     <link rel="icon" type="image/x-icon" href="{{ url('/storage/favicon.ico') }}">
     {!! SEOMeta::generate() !!}
     {!! OpenGraph::generate() !!}
+    {!! Twitter::generate() !!}
+    {!! JsonLd::generate() !!}
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">

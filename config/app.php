@@ -131,6 +131,8 @@ return [
     'aliases' => [
         'SEOMeta' => Artesaos\SEOTools\Facades\SEOMeta::class,
         'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
+        'Twitter' => Artesaos\SEOTools\Facades\TwitterCard::class,
+        'JsonLd' => Artesaos\SEOTools\Facades\JsonLd::class,
 
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
         'Route' => Illuminate\Support\Facades\Route::class

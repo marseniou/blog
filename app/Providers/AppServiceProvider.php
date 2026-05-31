@@ -15,6 +15,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\LengthAwarePaginator;
 use BezhanSalleh\FilamentLanguageSwitch\LanguageSwitch;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\OpenGraph;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -43,5 +45,32 @@ class AppServiceProvider extends ServiceProvider
         Model::automaticallyEagerLoadRelationships();
 
         Page::observe(PageObserver::class);
+
+        view()->composer('components.layouts.main', function () {
+            $route = request()->route();
+
+            if (!$route || !$route->getName()) {
+                return;
+            }
+
+            $name = $route->getName();
+            $params = $route->parameters();
+
+            if (in_array(request()->segment(1), ['en', 'el'])) {
+                $locales = ['en' => 'en_US', 'el' => 'el_GR'];
+                $currentLocale = app()->getLocale();
+
+                OpenGraph::addProperty('locale', $locales[$currentLocale] ?? 'en_US');
+
+                foreach (['en', 'el'] as $locale) {
+                    try {
+                        $url = route($name, array_merge($params, ['locale' => $locale]));
+                        SEOMeta::addAlternateLanguage($locale, $url);
+                    } catch (\Exception $e) {
+                        // skip if route can't be generated
+                    }
+                }
+            }
+        });
     }
 }
